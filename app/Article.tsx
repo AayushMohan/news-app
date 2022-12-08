@@ -30,7 +30,7 @@ const Article = ({ article }: Props) => {
         </footer>
       </div>
 
-      <ReadMoreButton />
+      <ReadMoreButton article={article} />
     </article>
   );
 };
