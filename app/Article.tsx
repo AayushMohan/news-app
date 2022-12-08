@@ -23,7 +23,8 @@ const Article = ({ article }: Props) => {
         </div>
 
         <footer>
-          <p></p>
+          <p>{article.source} - </p>
+          <p>{article.published_at}</p>
         </footer>
       </div>
     </article>
