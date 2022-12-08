@@ -1,7 +1,14 @@
+import { useRouter } from "next/navigation";
 import React from "react";
 
-const ReadMoreButton = () => {
-  return <div>ReadMoreButton</div>;
+type Props = {
+  article: Article;
+};
+
+const ReadMoreButton = ({ article }: Props) => {
+  const router = useRouter();
+
+  return <div></div>;
 };
 
 export default ReadMoreButton;
