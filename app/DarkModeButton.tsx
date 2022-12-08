@@ -12,6 +12,10 @@ const DarkModeButton = () => {
     setMounted(true);
   }, []);
 
+  if (!mounted) {
+    return null;
+  }
+
   return <div>DarkModeButton</div>;
 };
 
