@@ -1,6 +1,7 @@
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import NavLinks from "./NavLinks";
+import SearchBox from "./SearchBox";
 
 const Header = () => {
   return (
@@ -29,6 +30,7 @@ const Header = () => {
       <NavLinks />
 
       {/* SearchBox */}
+      <SearchBox />
     </header>
   );
 };
