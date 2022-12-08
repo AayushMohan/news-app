@@ -21,6 +21,10 @@ const Article = ({ article }: Props) => {
             <p>{article.description}</p>
           </section>
         </div>
+
+        <footer>
+          <p></p>
+        </footer>
       </div>
     </article>
   );
