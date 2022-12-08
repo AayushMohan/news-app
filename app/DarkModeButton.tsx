@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 
 const DarkModeButton = () => {
   return <div>DarkModeButton</div>;
