@@ -7,19 +7,11 @@ const fetchNews = async (
  isDynamic?: boolean
 ) => {
  // GraphQL query
- const query = gql`
-  query MyQuery(
-   $access_key: String!
-   $categories: String!
-   $keywords: String
-  ){
-    myQuery(
-     access_key: $access_key
-     categories: $category
-     country: "gb, us, uk, india"
-     sort:"published_desc"
-     keywords: $keywords
-     ) {
+ const query = gql`query MyQuery{
+     myQuery(
+      access_key: "4bb498f44ca6d29a99dfb633b4b9eafe"
+      countries: "in"
+    ){
        data {
         author
         category
