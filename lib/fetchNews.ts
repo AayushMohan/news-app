@@ -69,3 +69,16 @@ export default fetchNews;
 
 // Example Import 
 // Stepzen Import Curl: "http://api.mediastack.com/v1/news?access_key=your_mediastackkey"
+
+// query MyQuery(
+//    $access_key: String!
+//    $categories: String!
+//    $keywords: String
+//   ){
+//     myQuery(
+//      access_key: $access_key
+//      categories: $category
+//      country: "gb, us, uk, india"
+//      sort:"published_desc"
+//      keywords: $keywords
+//      ) {
