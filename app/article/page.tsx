@@ -16,7 +16,7 @@ function ArticlePage({ searchParams }: Props) {
   const article: Article = searchParams;
 
   return (
-    <div>
+    <article>
       <section className="flex flex-col lg:flex-row pb-24 px-0 lg:px-10">
         {article.image && (
           <img
@@ -32,7 +32,7 @@ function ArticlePage({ searchParams }: Props) {
           </h1>
 
           <div className="flex divided-x-2 space-x-4">
-            <h2 className="font-bold">By: {article.author}</h2>
+            <h2 className="font-bold">By: {article.author || "unknown"}</h2>
             <h2 className="font-bold pl-4">Source: {article.source}</h2>
             <p className="pl-4">
               <LiveTimeStamp time={article.published_at} />
@@ -42,7 +42,7 @@ function ArticlePage({ searchParams }: Props) {
           <p className="pt-4">{article.description}</p>
         </div>
       </section>
-    </div>
+    </article>
   );
 }
 

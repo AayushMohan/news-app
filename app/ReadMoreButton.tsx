@@ -1,13 +1,12 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import React from "react";
 
 type Props = {
   article: Article;
 };
 
-const ReadMoreButton = ({ article }: Props) => {
+function ReadMoreButton({ article }: Props) {
   const router = useRouter();
 
   const handleClick = () => {
@@ -28,6 +27,6 @@ const ReadMoreButton = ({ article }: Props) => {
       Read More
     </button>
   );
-};
+}
 
 export default ReadMoreButton;
