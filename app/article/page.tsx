@@ -2,10 +2,10 @@ import { notFound } from "next/navigation";
 import LiveTimeStamp from "../LiveTimeStamp";
 
 type Props = {
-  searchParams: Article;
+  searchParams?: Article;
 };
 
-const ArticlePage = ({ searchParams }: Props) => {
+function ArticlePage({ searchParams }: Props) {
   if (
     (searchParams && Object.entries(searchParams).length === 0) ||
     !searchParams
@@ -44,6 +44,6 @@ const ArticlePage = ({ searchParams }: Props) => {
       </section>
     </div>
   );
-};
+}
 
 export default ArticlePage;
