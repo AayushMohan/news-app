@@ -1,7 +1,12 @@
-import React from "react";
+"use client";
+import TimeAgo from "react-timeago";
 
-const LiveTimeStamp = () => {
-  return <div>LiveTimeStamp</div>;
+type Props = {
+  time: string;
+};
+
+const LiveTimeStamp = ({ time }: Props) => {
+  return <TimeAgo date={time} />;
 };
 
 export default LiveTimeStamp;
