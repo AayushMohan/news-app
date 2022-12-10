@@ -7,11 +7,19 @@ const fetchNews = async (
  isDynamic?: boolean
 ) => {
  // GraphQL query
- const query = gql`query MyQuery{
-     myQuery(
-      access_key: "4bb498f44ca6d29a99dfb633b4b9eafe"
-      countries: "in"
-    ){
+ const query = gql`
+ query MyQuery(
+   $access_key: String!
+   $categories: String!
+   $keywords: String
+  ) {
+    myQuery(
+        access_key: $access_key
+        categories: $categories
+        countries: "in"
+        sort: "published_desc"
+        keywords: $keywords
+     ) {
        data {
         author
         category
@@ -35,7 +43,7 @@ const fetchNews = async (
 `;
  // Fetch function with Next.js 13 Catching...
  const res = await fetch("https://simmerath.stepzen.net/api/sanguine-seagull/__graphql", {
-   method: 'POST',
+   method: "POST",
    cache: isDynamic ? "no-cache" : "default",
    next: isDynamic ? {revalidate: 0} : {revalidate: 20},
    headers:{
@@ -70,15 +78,3 @@ export default fetchNews;
 // Example Import 
 // Stepzen Import Curl: "http://api.mediastack.com/v1/news?access_key=your_mediastackkey"
 
-// query MyQuery(
-//    $access_key: String!
-//    $categories: String!
-//    $keywords: String
-//   ){
-//     myQuery(
-//      access_key: $access_key
-//      categories: $category
-//      country: "gb, us, uk, india"
-//      sort:"published_desc"
-//      keywords: $keywords
-//      ) {

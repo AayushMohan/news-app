@@ -9,6 +9,7 @@ type Article {
   source: String
   title: String
   url: String
+  keywords: String
 }
 type Pagination {
   count: Int
@@ -25,10 +26,10 @@ type Query {
   myQuery(
     access_key: String
     countries: String
-    categories: String
     limit: String
     offset: String
     sort: String
     keywords: String
+    categories: String
   ): Root @rest(endpoint: "http://api.mediastack.com/v1/news")
 }
