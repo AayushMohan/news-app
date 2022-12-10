@@ -77,4 +77,3 @@ export default fetchNews;
 
 // Example Import 
 // Stepzen Import Curl: "http://api.mediastack.com/v1/news?access_key=your_mediastackkey"
-
