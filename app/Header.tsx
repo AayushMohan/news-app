@@ -30,10 +30,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* NavLinks */}
       <NavLinks />
-
-      {/* SearchBox */}
       <SearchBox />
     </header>
   );
